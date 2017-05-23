@@ -1,0 +1,27 @@
+{
+    "name": "<vendor-name>/<component-name>",
+    "description": "<description>",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "<your-full-name>",
+            "email": "your-email@address.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "vendor-name\\component-name\\": "src/vendor-name/component-name"
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs -p --standard=vendor/escapestudios/symfony2-coding-standard/Symfony2 src",
+        "test": "phpunit --configuration build/phpunit/phpunit.xml --colors=always"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "escapestudios/symfony2-coding-standard": "^2.9"
+    }
+}
